@@ -88,18 +88,17 @@ console.log("reqbody----->",req.body)
         // logData(req);
         console.log("argumentos---->",inArguments)
         console.log("inicia post")
-        // axios.defaults.headers = {
-        // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
-        // }
-        // axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
+        axios.defaults.headers = {
+        'Content-Type': 'application/json',
+        }
+        axios.post('https://twilio55.herokuapp.com/whats' , 
         // {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
-        // .then(response => {
-        // console.log('Response', response.data)
-        // })
-        // .catch(e => {
-        // console.log('Error: ', e.response.data)
-        // })
+        ).then(response => {
+        console.log('Response', response.data)
+        })
+        .catch(e => {
+        console.log('Error: ', e.response.data)
+        })
 
         //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
